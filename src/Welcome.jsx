@@ -1,11 +1,9 @@
-import React from 'react'
-
-const Welcome = () => {
+const Welcome = ({ text }) => {
   return (
     <div>
-        <h2>Welcome</h2>
+      <h2>Welcome {text}</h2>
     </div>
-  )
-}
+  );
+};
 
-export default Welcome
+export default Welcome;

@@ -11,9 +11,10 @@ body {
   justify-content: center;
   align-items: center;
   background: #0f172a;
+  color: White;
 }
 
-.login-container {
+/* .login-container {
   width: 350px;
   background: white;
   padding: 40px;
@@ -24,9 +25,9 @@ body {
 
 h1 {
   margin-bottom: 10px;
-}
+} */
 
-p {
+/* p {
   margin-bottom: 20px;
   color: #666;
 }
@@ -59,4 +60,4 @@ a {
   margin-top: 15px;
   text-decoration: none;
   color: #2563eb;
-}
+} */
