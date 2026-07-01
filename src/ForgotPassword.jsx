@@ -9,7 +9,7 @@ const ForgotPassword = () => {
 
   return (
     <main className="auth-page">
-      <div className="auth-container">
+      <section className="auth-container">
         <h1 className="auth-title">Forgot Password</h1>
         <p>Enter your email address and we will send you a reset link.</p>
 
@@ -18,8 +18,9 @@ const ForgotPassword = () => {
           <Button text="Send Reset Link" />
         </form>
 
-        <Link to="/">Back to Login</Link>
-      </div>
+        <Link to="/auth">Back to Login</Link>
+        <Link to="/">Back Home</Link>
+      </section>
     </main>
   );
 };

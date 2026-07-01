@@ -1,6 +1,7 @@
 import { Navigate, Route, Routes } from "react-router-dom";
 import Home from "./Home";
-import Dashboard from "./DashBoard";
+import Auth from "./Auth";
+import Dashboard from "./Dashboard";
 import ForgotPassword from "./ForgotPassword";
 
 const App = () => {
@@ -8,6 +9,7 @@ const App = () => {
     <div>
       <Routes>
         <Route element={<Home />} path="/" />
+        <Route element={<Auth />} path="/auth" />
         <Route element={<Dashboard />} path="/dashboard" />
         <Route element={<ForgotPassword />} path="/forgot-password" />
         <Route element={<Navigate to="/" replace />} path="*" />

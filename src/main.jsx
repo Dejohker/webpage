@@ -5,9 +5,13 @@ import "./index.css";
 import App from "./App.jsx";
 import { BrowserRouter } from "react-router-dom";
 
+// const basename = window.location.pathname.startsWith("/webpage")
+//   ? "/webpage"
+//   : "/";
+
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <BrowserRouter basename={import.meta.env.BASE_URL}>
+    <BrowserRouter>
       <App />
     </BrowserRouter>
   </StrictMode>,

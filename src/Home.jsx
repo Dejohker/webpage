@@ -1,100 +1,44 @@
-import { useState } from "react";
-import Button from "./Button";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Home = () => {
-  const [page, setPage] = useState("signup");
-  const [error, setError] = useState("");
-  const navigate = useNavigate();
-  const handleSignup = (event) => {
-    event.preventDefault();
-    const formData = new FormData(event.currentTarget);
-    const password = formData.get("password");
-    const confirmPassword = formData.get("confirmPassword");
-
-    if (password !== confirmPassword) {
-      setError("Passwords do not match.");
-      return;
-    }
-
-    setError("");
-    showLoginPage(event);
-    alert("Account created successfully");
-  };
-
-  const handleLogin = (event) => {
-    event.preventDefault();
-    alert("Logged in successfully");
-    navigate("/dashboard");
-  };
-
-  const showLoginPage = (event) => {
-    event.preventDefault();
-    setError("");
-    setPage("login");
-  };
-
-  const showSignupPage = (event) => {
-    event.preventDefault();
-    setPage("signup");
-  };
-
-  if (page === "login") {
-    return (
-      <main className="auth-page">
-        <div className="auth-container">
-          <h1 className="auth-title">Welcome Back</h1>
-          <p>Sign in to continue</p>
-
-          <form onSubmit={handleLogin}>
-            <input type="email" placeholder="Email Address" required />
-            <input type="password" placeholder="Password" required />
-            <Button text="Login" />
-          </form>
-
-          <Link to="/forgot-password">Forgot Password?</Link>
-          <a href="#" onClick={showSignupPage}>
-            Need an account? Sign Up
-          </a>
-        </div>
-      </main>
-    );
-  }
-
   return (
-    <main className="auth-page">
-      <div className="auth-container">
-        <h1 className="auth-title">Create Account</h1>
-        <p>Sign up to get started</p>
+    <main className="site-shell">
+      <section className="hero-section">
+        <div className="hero-content">
+          <span className="eyebrow">Main website</span>
+          <h1>Alameen React</h1>
+          <p>
+            Use this home page as the starting point for every branch in the
+            project.
+          </p>
+          <div className="hero-actions" aria-label="Website branches">
+            <Link className="primary-link" to="/auth">
+              Login / Sign Up
+            </Link>
+            <Link className="secondary-link" to="/dashboard">
+              View Dashboard
+            </Link>
+          </div>
+        </div>
+      </section>
 
-        <form onSubmit={handleSignup}>
-          {error && <span className="error-message">{error}</span>}
-          <input type="text" name="fullName" placeholder="Full Name" required />
-          <input
-            type="email"
-            name="email"
-            placeholder="Email Address"
-            required
-          />
-          <input
-            type="password"
-            name="password"
-            placeholder="Password"
-            required
-          />
-          <input
-            type="password"
-            name="confirmPassword"
-            placeholder="Confirm Password"
-            required
-          />
-          <Button text="Sign Up" />
-        </form>
-
-        <a href="#" onClick={showLoginPage}>
-          Already have an account? Login
-        </a>
-      </div>
+      <section className="branch-section" aria-label="Available pages">
+        <Link className="branch-card" to="/auth">
+          <span>01</span>
+          <h2>Auth</h2>
+          <p>Create an account or log in.</p>
+        </Link>
+        <Link className="branch-card" to="/dashboard">
+          <span>02</span>
+          <h2>Dashboard</h2>
+          <p>Open the carousel page.</p>
+        </Link>
+        <Link className="branch-card" to="/forgot-password">
+          <span>03</span>
+          <h2>Password Reset</h2>
+          <p>Send a password reset link.</p>
+        </Link>
+      </section>
     </main>
   );
 };
