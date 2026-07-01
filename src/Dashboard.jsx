@@ -1,11 +1,12 @@
+import CustomCarousel from "./CustomCarousel";
 
-
-const DashBoard = () => {
+const Dashboard = () => {
   return (
     <div>
+      <CustomCarousel />
       <h1>Welcome to my Dashboard</h1>
     </div>
   );
 };
 
-export default DashBoard;
+export default Dashboard;
