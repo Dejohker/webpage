@@ -1,6 +1,6 @@
 import { Navigate, Route, Routes } from "react-router-dom";
 import Home from "./Home";
-import Dashboard from "./Dashboard";
+import Dashboard from "./DashBoard";
 import ForgotPassword from "./ForgotPassword";
 
 const App = () => {

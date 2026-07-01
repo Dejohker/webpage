@@ -7,6 +7,7 @@ const CarouselImage = ({ src, text }) => {
         width: "50%",
         height: "auto",
         display: "block",
+        objectFit: "cover",
         margin: "0 auto",
       }}
     />
