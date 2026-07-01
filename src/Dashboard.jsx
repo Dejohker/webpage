@@ -1,3 +1,5 @@
+import CustomCarousel from "./CustomCarousel";
+
 const Dashboard = () => {
   return (
     <div>
