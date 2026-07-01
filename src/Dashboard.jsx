@@ -1,11 +1,11 @@
+import CustomCarousel from "./Component/CustomCarousel";
+
 const Dashboard = () => {
   return (
     <div>
-        <h1>
-            Welcome to my dashboard
-        </h1>
+      <CustomCarousel />
     </div>
-  )
-}
+  );
+};
 
-export default Dashboard
+export default Dashboard;
