@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Button from "./Button";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Home = () => {
   const [page, setPage] = useState("signup");
@@ -24,7 +24,7 @@ const Home = () => {
   const handleLogin = (event) => {
     event.preventDefault();
     alert("Logged in successfully");
-    navigate("/home");
+    navigate("/dashboard");
   };
 
   const showLoginPage = (event) => {
@@ -51,7 +51,7 @@ const Home = () => {
             <Button text="Login" />
           </form>
 
-          <a href="#">Forgot Password?</a>
+          <Link to="/forgot-password">Forgot Password?</Link>
           <a href="#" onClick={showSignupPage}>
             Need an account? Sign Up
           </a>

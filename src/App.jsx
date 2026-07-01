@@ -1,13 +1,15 @@
 import { Route, Routes } from "react-router-dom";
 import Home from "./Home";
-import DashBoard from "./DashBoard";
+import Dashboard from "./Dashboard";
+import ForgotPassword from "./ForgotPassword";
 
 const App = () => {
   return (
     <div>
       <Routes>
         <Route element={<Home />} path="/" />
-        <Route element={<DashBoard />} path="/home" />
+        <Route element={<Dashboard />} path="/Dashboard" />
+        <Route element={<ForgotPassword />} path="/forgot-password" />
       </Routes>
     </div>
   );
